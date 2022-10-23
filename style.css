@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root{
+    /* PRIMARY COLOR */
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+
+    /* Neutral color */ 
+    --main-BG: hsl(217, 54%, 11%);
+    --card-BG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+
+    /* FONT  */
+    font-size: 18px;
+    font-family: 'Outfit', sans-serif;
+
+    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--main-BG);
+    height: 100vh;
+    margin: 0;
+}
+.card{
+    background-color: var(--card-BG);
+    max-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 20px;
+    border-radius: 20px;
+}
+.image-container{
+    width: 310px;
+    height: 310px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color:hsla(178, 100%, 50%, 0.336);
+}
+
+
+.image-container .nft{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+ }
+ 
+.middle{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 25%;
+  left: 40%;
+}
+
+
+.image-container:hover .nft{
+    opacity: 0.3;
+    cursor: pointer;
+}
+.image-container:hover .middle {
+    opacity: 1;
+    cursor: pointer;
+}
+.name{
+    color: white;
+    margin-bottom: 20px;
+}
+.name:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
+.lead{
+    color: var(--Soft-blue);
+    margin-bottom: 20px;
+}
+.detail{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.price{
+    display: flex;
+    align-items: center;
+    color: var(--Cyan);
+}
+.price img {
+    margin-right: 5px;
+}
+     
+.time{
+    display: flex;
+    align-items: center;
+    color: var(--Soft-blue)
+}
+.time img {
+    margin-right: 5px;
+}
+.author{
+    display: flex;
+    align-items: center;
+}
+.author img{
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.author p{
+    color:var(--Soft-blue)
+}
+.author span{
+    color: var(--White);
+}
+
+.author span:hover{
+    cursor: pointer;
+    color: var(--Cyan);
+}
